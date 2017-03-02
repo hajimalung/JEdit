@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="501.0" prefWidth="767.0" stylesheets="@darktheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeditv2.FXMLDocumentController">
+   <children>
+      <BorderPane layoutX="60.0" layoutY="43.0" prefHeight="329.0" prefWidth="522.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar fx:id="m_bar" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu fx:id="file_menu" mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="new_option" mnemonicParsing="false" onAction="#newClicked" text="New                  " />
+                        <MenuItem fx:id="open_option" mnemonicParsing="false" onAction="#openClicked" text="Open                " />
+                        <MenuItem fx:id="save_option" mnemonicParsing="false" onAction="#saveClicked" text="Save                " />
+                        <MenuItem fx:id="saveas_option" mnemonicParsing="false" onAction="#saveAsClicked" text="SaveAs                " />
+                        <MenuItem fx:id="close_option" mnemonicParsing="false" onAction="#closeClicked" text="Close                   " />
+                  </items>
+                </Menu>
+                <Menu fx:id="edit_menu" mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem fx:id="cut_option" mnemonicParsing="false" onAction="#cutClicked" text="Cut             " />
+                        <MenuItem fx:id="copy_option" mnemonicParsing="false" onAction="#copyClicked" text="Copy" />
+                        <MenuItem fx:id="paste_option" mnemonicParsing="false" onAction="#pasteClicked" text="Paste" />
+                  </items>
+                </Menu>
+                <Menu fx:id="build_menu" mnemonicParsing="false" text="Build">
+                  <items>
+                    <MenuItem fx:id="compile_option" mnemonicParsing="false" onAction="#compileClicked" text="Compile              " />
+                        <MenuItem fx:id="run_option" mnemonicParsing="false" onAction="#runClicked" text="Run" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Editor">
+                    <items>
+                      <MenuItem fx:id="dispStatus" mnemonicParsing="false" onAction="#dispSttsClikced" text="Show Status" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <TextArea fx:id="codearea" onKeyPressed="#keyPressedinCodeArea" onKeyTyped="#contentChanged" prefHeight="312.0" prefWidth="767.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="158.0" prefWidth="767.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="status" editable="false" prefHeight="82.0" prefWidth="767.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="countwords" layoutX="8.0" layoutY="132.0" prefHeight="21.0" prefWidth="756.0" text="Lines:                Words:                  Cursor Position:" />
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
