@@ -27,6 +27,6 @@ public class JEditV2 extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-		System.out.println("started!!!!!");
+		System.out.println("started!!!!! this is sample");
     } 
 }
